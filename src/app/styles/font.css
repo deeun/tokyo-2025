@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'UhBeeJJIBBABBA';
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/UhBeeJJIBBABBA.eot');
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/UhBeeJJIBBABBA.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UhBeeSe_hyun';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UhBeeSeulvely';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EF_YOONY';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_YOONY.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquare 300';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquare 400';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquare 700';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquare 800';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+.light {
+    font-family: "NanumSquare 300", sans-serif;
+}
+
+.regular {
+    font-family: "NanumSquare 400", sans-serif;
+}
+
+.bold {
+    font-family: "NanumSquare 700", sans-serif;
+}
+
+.extra {
+    font-family: "NanumSquare 800", sans-serif;
+}
+
+* {
+    font-family: "NanumSquare 400", sans-serif;
+}
+
+.ft-jp {
+    font-family: Pretendard;
+}
+/* font size */
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-11 {
+    font-size: 11px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-17 {
+    font-size: 17px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-19 {
+    font-size: 19px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-21 {
+    font-size: 21px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-23 {
+    font-size: 23px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-25 {
+    font-size: 25px;
+}
+
+.fs-26 {
+    font-size: 26px;
+}
+
+.fs-27 {
+    font-size: 27px;
+}
+
+.fs-28 {
+    font-size: 28px;
+}
+
+.fs-29 {
+    font-size: 29px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+.fs-31 {
+    font-size: 31px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-33 {
+    font-size: 33px;
+}
+
+.fs-34 {
+    font-size: 34px;
+}
+
+.fs-35 {
+    font-size: 35px;
+}
+
+.fs-36 {
+    font-size: 36px;
+}
+
+.fs-37 {
+    font-size: 37px;
+}
+
+.fs-38 {
+    font-size: 38px;
+}
+
+.fs-39 {
+    font-size: 39px;
+}
+
+.fs-40 {
+    font-size: 40px;
+}
+
+.fs-41 {
+    font-size: 41px;
+}
+

@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-bg-color: cornflowerblue;
+  --orange: #ff9800;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  box-shadow: 0 0 20px rgba(0,0,0,.05);
+  width: 100%;
+  max-width: 480px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*@media (max-width: 480px) {*/
+/*  html,*/
+/*  body {*/
+/*    max-width: 480px;*/
+/*    overflow-x: hidden;*/
+/*    background-color: blue;*/
+/*  }*/
+/*}*/
