@@ -113,25 +113,25 @@ export default function Home() {
                       </div>
 
 
-                      <div className={'mg-bottom-10'}>일정 요약</div>
-                      <div className={styles.calendar__wrap}>
-                          <div className={`${styles.calendar__block} ${styles.bd_left}`}>13</div>
-                          <div className={styles.calendar__block}>14</div>
-                          <div className={styles.calendar__block}>15</div>
-                          <div className={styles.calendar__block}>16</div>
-                          <div className={styles.calendar__block}>17</div>
-                          <div className={`jp-bold ${styles.calendar__block}`}>18(土)</div>
-                          <div className={`jp-bold ${styles.calendar__block}`}>19(日)</div>
-                      </div>
-                      <div className={styles.calendar__wrap}>
-                          <div className={`jp-bold ${styles.calendar__block__bottom} ${styles.bd_left}`}>20(月)</div>
-                          <div className={`jp-bold ${styles.calendar__block__bottom}`}>21(火)</div>
-                          <div className={`jp-bold ${styles.calendar__block__bottom}`}>22(水)</div>
-                          <div className={styles.calendar__block__bottom}>23</div>
-                          <div className={styles.calendar__block__bottom}>24</div>
-                          <div className={styles.calendar__block__bottom}>25</div>
-                          <div className={styles.calendar__block__bottom}>26</div>
-                      </div>
+                      {/*<div className={'mg-bottom-10'}>일정 요약</div>*/}
+                      {/*<div className={styles.calendar__wrap}>*/}
+                      {/*    <div className={`${styles.calendar__block} ${styles.bd_left}`}>13</div>*/}
+                      {/*    <div className={styles.calendar__block}>14</div>*/}
+                      {/*    <div className={styles.calendar__block}>15</div>*/}
+                      {/*    <div className={styles.calendar__block}>16</div>*/}
+                      {/*    <div className={styles.calendar__block}>17</div>*/}
+                      {/*    <div className={`jp-bold ${styles.calendar__block}`}>18(土)</div>*/}
+                      {/*    <div className={`jp-bold ${styles.calendar__block}`}>19(日)</div>*/}
+                      {/*</div>*/}
+                      {/*<div className={styles.calendar__wrap}>*/}
+                      {/*    <div className={`jp-bold ${styles.calendar__block__bottom} ${styles.bd_left}`}>20(月)</div>*/}
+                      {/*    <div className={`jp-bold ${styles.calendar__block__bottom}`}>21(火)</div>*/}
+                      {/*    <div className={`jp-bold ${styles.calendar__block__bottom}`}>22(水)</div>*/}
+                      {/*    <div className={styles.calendar__block__bottom}>23</div>*/}
+                      {/*    <div className={styles.calendar__block__bottom}>24</div>*/}
+                      {/*    <div className={styles.calendar__block__bottom}>25</div>*/}
+                      {/*    <div className={styles.calendar__block__bottom}>26</div>*/}
+                      {/*</div>*/}
                   </div>
               </div>
               :
