@@ -48,6 +48,7 @@
     url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.ttf') format("truetype");
     font-display: swap;
 }
+
 @font-face {
     font-family: 'NanumSquare 700';
     font-weight: 700;
@@ -79,7 +80,12 @@
     font-family: "NanumSquare 400", sans-serif;
 }
 
+.medium {
+    font-family: "NanumSquare 700", sans-serif;
+    font-weight: 500 !important;
+}
 .bold {
+    font-weight: 700 !important;
     font-family: "NanumSquare 700", sans-serif;
 }
 
@@ -87,8 +93,13 @@
     font-family: "NanumSquare 800", sans-serif;
 }
 
+.jp-bold {
+    font-weight: 700 !important;
+}
+
 * {
     font-family: "NanumSquare 400", sans-serif;
+    color: #323232;
 }
 
 .ft-jp {

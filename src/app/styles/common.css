@@ -15,38 +15,6 @@ input:focus {
     color: #FA5252;
 }
 
-/*.s-bg-red {*/
-/*    !*background-color: #FF6464;*!*/
-/*    !*background-color: #FF3232;*!*/
-/*    background-color: rgb(255, 107, 107);*/
-/*}*/
-/* 테이블 */
-.table__zero-result__msg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    color: #333333;
-    font-size: 14px;
-    font-weight: 300;
-    min-height: 120px;
-}
-
-.detail_filter_btn {
-    text-align: right;
-}
-
-.detail_filter_btn span div {
-    position: relative;
-    top: 5px;
-    transform: rotate(270deg);
-    filter: invert(21%) sepia(68%) saturate(2788%) hue-rotate(200deg) brightness(65%) contrast(104%);
-}
-
-td {
-    font-size: 14px;
-}
-
 /* bg color*/
 .bg_fff {
     background-color: #FFFFFF;

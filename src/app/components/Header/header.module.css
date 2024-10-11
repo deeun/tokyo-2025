@@ -3,7 +3,7 @@
     max-width: 480px;
     position: fixed;
     top: 0;
-    background-color: var(--orange);
+    background-color: var(--green);
     display: flex;
     flex-direction: column;
 }
@@ -22,5 +22,8 @@
 .side__bar {
     box-shadow: 0 0 0 1px rgba(0,0,0,.05);
     background-color: white;
-    height: 200px;
+    padding: 10px 0;
+}
+.side__bar_item {
+    padding: 10px 20px;
 }

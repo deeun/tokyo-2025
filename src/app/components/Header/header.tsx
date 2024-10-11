@@ -8,7 +8,6 @@ function Header() {
     const dispatch = useDispatch();
     const sideBarShow = useSelector(state => state.headerReducer.sideBarShow);
     const iconClick = () => {
-        console.log(sideBarShow)
         dispatch(setSideBarShow(!sideBarShow))
     }
 
@@ -24,7 +23,12 @@ function Header() {
             </div>
             { sideBarShow &&
                 <div className={styles.side__bar}>
-                    사이드바
+                    <div className={styles.side__bar_item}>개요</div>
+                    <div className={styles.side__bar_item}>day 1</div>
+                    <div className={styles.side__bar_item}>day 2</div>
+                    <div className={styles.side__bar_item}>day 3</div>
+                    <div className={styles.side__bar_item}>day 4</div>
+                    <div className={styles.side__bar_item}>day 5</div>
                 </div> }
         </div>
     );

@@ -2,7 +2,37 @@
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 68px 20px;
+  padding: 68px 20px 20px;
+}
+.flight__wrap {
+  /*background-color: red;*/
+  padding: 10px;
+}
+.calendar__wrap {
+  /*background-color: red;*/
+  /*margin-top: 10px;*/
+  display: flex;
+  justify-content: center;
+}
+.calendar__block {
+  width: 45px;
+  height: 45px;
+  border-right: 1px solid #333333;
+  border-top: 1px solid #333333;
+  font-size: 12px;
+  font-family: Pretendard;
+}
+.calendar__block__bottom {
+  width: 45px;
+  height: 45px;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
+  font-size: 12px;
+  font-family: Pretendard;
+}
+.bd_left {
+  border-left: 1px solid #333333;
 }
 
 @media (max-width: 480px) {
