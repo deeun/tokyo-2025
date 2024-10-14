@@ -4,8 +4,16 @@
   margin: 0 auto;
   padding: 68px 20px;
 }
-.flight__wrap {
-  /*background-color: red;*/
+.section__wrap {
+  background-color: #F5F5F5;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 10px;
+}
+.accom__wrap {
+  background-color: #F5F5F5;
+  margin-top: 20px;
+  border-radius: 8px;
   padding: 10px;
 }
 .calendar__wrap {

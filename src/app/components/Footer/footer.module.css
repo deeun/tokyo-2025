@@ -1,0 +1,9 @@
+.footer__wrap {
+    position: fixed;
+    z-index: 100;
+    bottom: -10px;
+}
+
+.footer__wrap > * {
+    display: block !important;
+}
