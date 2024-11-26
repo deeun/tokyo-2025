@@ -7,6 +7,7 @@ import "./styles/font.css";
 import Header from "@/app/components/Header/header";
 import ReduxProvider from "../../store/ReduxProvider";
 import Footer from "@/app/components/Footer/footer";
+import LayoutWrapper from "@/app/layoutWrapper";
 
 export const metadata: Metadata = {
   title: "도쿄 2025",
@@ -20,13 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <ReduxProvider>
-      <body style={{display: 'flex', flexDirection: 'column'}}>
-        <Header/>
-        {children}
-        <Footer/>
-      </body>
-    </ReduxProvider>
+      <ReduxProvider>
+        <body style={{display: 'flex', flexDirection: 'column'}}>
+          <LayoutWrapper children={children}/>
+        </body>
+      </ReduxProvider>
     </html>
   );
 }
