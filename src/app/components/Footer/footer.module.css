@@ -1,9 +1,31 @@
 .footer__wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 480px;
     position: fixed;
     z-index: 100;
-    bottom: -10px;
+    bottom: 0;
+}
+.footer__contents_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.capy__wrap {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.footer__wrap > * {
-    display: block !important;
+/*.footer__wrap > * {*/
+/*    display: block !important;*/
+/*}*/
+
+.word_balloon__container {
+    border: 1px solid #F5F5F5;
+    background-color: white;
+    width: 200px;
+    border-radius: 12px;
+    padding: 20px;
+    /*z-index: 100;*/
+    /*bottom: 20px;*/
 }
