@@ -15,6 +15,13 @@ input:focus {
     color: #FA5252;
 }
 
+.main__wrap {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 68px 20px;
+}
+
 /* bg color*/
 .bg_fff {
     background-color: #FFFFFF;

@@ -1,14 +1,8 @@
-.main__wrap {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 68px 20px;
-}
 .section__wrap {
   background-color: #F5F5F5;
   margin-top: 20px;
   border-radius: 8px;
-  padding: 10px;
+  padding: 16px;
 }
 .accom__wrap {
   background-color: #F5F5F5;
@@ -41,6 +35,12 @@
 }
 .bd_left {
   border-left: 1px solid #333333;
+}
+
+.show__desc {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 @media (max-width: 480px) {
