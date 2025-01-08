@@ -33,7 +33,6 @@ function Header() {
             </div>
             { sideBarShow &&
                 <div className={styles.side__bar}>
-                    <div className={styles.side__bar_item}>개요</div>
                     <div className={styles.side__bar_item} onClick={() => menuClick(1)}>day 1</div>
                     <div className={styles.side__bar_item} onClick={() => menuClick(2)}>day 2</div>
                     <div className={styles.side__bar_item} onClick={() => menuClick(3)}>day 3</div>
