@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './header.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {setSideBarShow} from "../../../../store/headerSlice";
-// import {router} from "next/client";
 import {useRouter} from "next/navigation";
 
 function Header() {
@@ -13,7 +12,7 @@ function Header() {
         dispatch(setSideBarShow(!sideBarShow))
     }
     const router = useRouter();
-    const menuClick = (page) => {
+    const menuClick = (page: number) => {
         router.push(`/detail/day${page}`);
         dispatch(setSideBarShow(false));
     }

@@ -26,7 +26,7 @@ function LayoutWrapper({children}: Readonly<{
                     {/*{loading && <Loading />}*/}
                     {/*{error.state && error.contents === 'BLOCK PAGE' && <Warning />}*/}
                     {children}
-                    <Footer />
+                    {/* <Footer /> */}
                 </>
             }
         </div>

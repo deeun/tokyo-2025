@@ -1,6 +1,7 @@
 .header__wrap {
     width: 100%;
     max-width: 480px;
+    min-width: 320px;
     position: fixed;
     top: 0;
     background-color: var(--green);

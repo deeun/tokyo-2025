@@ -3,6 +3,7 @@
   margin-top: 20px;
   border-radius: 8px;
   padding: 16px;
+  min-width: 320px;
 }
 .accom__wrap {
   background-color: #F5F5F5;
@@ -11,32 +12,37 @@
   padding: 10px;
 }
 .calendar__wrap {
-  /*background-color: red;*/
-  /*margin-top: 10px;*/
   display: flex;
   justify-content: center;
 }
 .calendar__block {
-  width: 45px;
-  height: 45px;
+  padding-left: 2px;
+  width: calc(14%);
+  height: 80px;
   border-right: 1px solid #333333;
   border-top: 1px solid #333333;
   font-size: 12px;
-  font-family: Pretendard;
+  font-family: "Pretendard-Regular";
+  cursor: pointer;
 }
 .calendar__block__bottom {
-  width: 45px;
-  height: 45px;
+  padding-left: 2px;
+  width: calc(14%);
+  height: 80px;
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-top: 1px solid #333333;
   font-size: 12px;
-  font-family: Pretendard;
+  font-family: "Pretendard-Regular";
 }
 .bd_left {
   border-left: 1px solid #333333;
 }
-
+.calendar__detail {
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 4px;
+}
 .show__desc {
   color: var(--green);
   font-size: 12px;
@@ -46,6 +52,9 @@
 @media (max-width: 480px) {
   .main__mobile_recommended__wrap {
     display: none;
+  }
+  .calendar__detail {
+    max-width: 45px;
   }
 }
 @media (max-height: 720px) {
