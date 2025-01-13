@@ -23,7 +23,7 @@ export default function Home() {
       {isClient ? (
         <div className={"main__wrap"}>
           <div className={styles.section__wrap}>
-            <div className={"mg-bottom-10 bold"}>✈️️ 출입국 정보</div>
+            <div className={"mg-bottom-10 bold ft-title"}>✈️️&nbsp; 출입국 정보</div>
             <div className={""}>
               <div className={"fs-12 ft_999 h100"}>대한항공 KE2101</div>
               <div className={"fx h100 mg-top-4"}>
@@ -31,12 +31,12 @@ export default function Home() {
                 <div>25/01/18(토)</div>
               </div>
               <div className={"fx-space-between mg-top-10"}>
-                <div className={"fx-column-center"} style={{ width: "85px" }}>
+                <div className={"fx-column-center"} style={{ width: "90px" }}>
                   서울(인천)
                   <div className={"fs-14 mg-top-4"}>09:00</div>
                 </div>
                 <div>➡︎︎</div>
-                <div className={"fx-column-center"} style={{ width: "85px" }}>
+                <div className={"fx-column-center"} style={{ width: "90px" }}>
                   도쿄(하네다)
                   <div className={"fs-14 mg-top-4"}>11:05</div>
                 </div>
@@ -49,12 +49,12 @@ export default function Home() {
                 <div>25/01/22(수)</div>
               </div>
               <div className={"fx-space-between mg-top-10"}>
-                <div className={"fx-column-center"} style={{ width: "85px" }}>
+                <div className={"fx-column-center"} style={{ width: "90px" }}>
                   도쿄(하네다)
                   <div className={"fs-14 mg-top-4"}>19:50</div>
                 </div>
                 <div>➡︎︎</div>
-                <div className={"fx-column-center"} style={{ width: "85px" }}>
+                <div className={"fx-column-center"} style={{ width: "90px" }}>
                   서울(인천)
                   <div className={"fs-14 mg-top-4"}>22:25</div>
                 </div>
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
           <div className={styles.section__wrap}>
             <div className="fx-space-between">
-              <div className={"bold"}>🏠️ 숙박 정보</div>
+              <div className={"bold ft-title"}>🏠️&nbsp; 숙박 정보</div>
               <div className={styles.show__desc}>상세정보 ▶︎ 클릭 !</div>
             </div>
             <div>
@@ -133,7 +133,7 @@ export default function Home() {
 
           <div className={styles.section__wrap}>
             <div className="fx-space-between">
-              <div className={"bold mg-bottom-20"}>📅 일정 요약</div>
+              <div className={"bold mg-bottom-20 ft-title"}>📅&nbsp; 일정 요약</div>
               <div className={styles.show__desc}>상세정보 날짜 클릭 !</div>
             </div>
             <div className={styles.calendar__wrap}>

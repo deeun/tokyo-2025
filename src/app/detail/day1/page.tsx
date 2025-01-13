@@ -143,7 +143,7 @@ function Page() {
           </div>
         </div>
         <div className={styles.detail__slot}>
-          <div className={styles.detail__slot_time}>18:00</div>
+          <div className={styles.detail__slot_time}>**:**</div>
           <div className={styles.detail__slot_contents_wrap}>
             <div className={styles.detail__content}>✨ BONUS</div>
             <div className={styles.detail__spot}>
@@ -153,7 +153,7 @@ function Page() {
               />
               <FoldInfo
                 info={takashimaya}
-                title="타카시마야 니혼바시|日本橋高島屋S.C."
+                title="타카시마야 니혼바시|日本橋高島屋"
               />
             </div>
           </div>

@@ -15,7 +15,8 @@
     margin-top: 20px;
 }
 .detail__title {
-    font-weight: 700;
+    font-family: 'NSR B';
+
 }
 .detail__title_desc {
     font-size: 14px;
@@ -23,7 +24,6 @@
     font-weight: 500;
 }
 .detail__slot {
-    /* background-color: red; */
     padding: 14px 0;
     display: flex;
 }
@@ -55,6 +55,5 @@
     font-size: 14px;
 }
 .detail__spot {
-    /* line-height: 16px; */
     margin-top: 6px;
 }

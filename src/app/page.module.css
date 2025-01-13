@@ -3,7 +3,7 @@
   margin-top: 20px;
   border-radius: 8px;
   padding: 16px;
-  min-width: 320px;
+  min-width: 300px;
 }
 .accom__wrap {
   background-color: #F5F5F5;
@@ -46,7 +46,7 @@
 .show__desc {
   color: var(--green);
   font-size: 12px;
-  font-weight: 600;
+  font-family: 'NSR B';
 }
 
 @media (max-width: 480px) {
