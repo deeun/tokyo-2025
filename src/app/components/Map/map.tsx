@@ -12,7 +12,7 @@ function Map(props: MapProps) {
   const mapRef = useRef(null);
   const [map, setMap] = useState(null);
   const dispatch = useDispatch();
-//   const loading = useSelector(state => state.loadingReducer.loading)
+
   useEffect(() => {
     dispatch(setLoading(true));
     // GoogleMap.js 스크립트 로드 기다리기
@@ -36,21 +36,30 @@ function Map(props: MapProps) {
   // 지도 초기화
   const initMap = async () => {
     if (window.google && !map) {
-      await navigator.geolocation.getCurrentPosition(function async(position) {
-        const currentLocation = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        };
-        const map = new window.google.maps.Map(mapRef.current, {
-          center: currentLocation,
-          zoom: 17,
-          mapId: "tokyomap",
-          disableDefaultUI: true,
-        });
-
-        setMap(map);
-        addMarkers(map, props.locations);
+      const map = new window.google.maps.Map(mapRef.current, {
+        center: { lat: 35.67238207461945, lng: 139.76666059178848 },
+        zoom: 17,
+        mapId: "tokyomap",
+        disableDefaultUI: true,
       });
+
+      setMap(map);
+      await addMarkers(map, props.locations);
+      // await navigator.geolocation.getCurrentPosition(function async(position) {
+      //   const currentLocation = {
+      //     lat: position.coords.latitude,
+      //     lng: position.coords.longitude,
+      //   };
+      //   const map = new window.google.maps.Map(mapRef.current, {
+      //     center: currentLocation,
+      //     zoom: 17,
+      //     mapId: "tokyomap",
+      //     disableDefaultUI: true,
+      //   });
+
+      //   setMap(map);
+      //   addMarkers(map, props.locations);
+      // });
     }
   };
 
@@ -62,7 +71,7 @@ function Map(props: MapProps) {
       "marker"
     );
     let marker;
-    await newMap.setCenter(newLocations[0].position);
+    newMap.setCenter(newLocations[0].position);
     newLocations?.forEach((l: any) => {
       const tag = document.createElement("div");
       tag.className = "map-tag";
@@ -74,7 +83,7 @@ function Map(props: MapProps) {
       });
     });
 
-    await dispatch(setLoading(false));
+    dispatch(setLoading(false));
   };
 
   return (

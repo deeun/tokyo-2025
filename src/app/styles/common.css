@@ -18,13 +18,14 @@ input:focus {
 }
 .loading {
     width: 100%;
-    /* max-width: 480px; */
+    max-width: 480px;
     height: calc(100vh);
     position: absolute;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     background-color: white;
     margin-top: 50px;
 }

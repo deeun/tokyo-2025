@@ -3,8 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "../detail.module.css";
 import FoldInfo from "@/app/components/FoldInfo/foldInfo";
 import Map from "@/app/components/Map/map";
+import { useDispatch } from "react-redux";
+import { setLoading } from "../../../../store/loadingSlice";
 
 function Page() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setLoading(false));
+  }, []);
   const ginzaSix = {
     contents: "250개의 브랜드 매장이 입점한 긴자 최대 규모의 복합 쇼핑몰.",
     url: "https://ginza6.tokyo.e.abf.hp.transer.com/shops/",
@@ -49,21 +55,38 @@ function Page() {
     hours: "매장별 확인 필요",
   };
   const brandCluster = [
-    { title: '에르메스 긴자', position: { lat: 35.67220270841222, lng: 139.76351396445938 }},
-    { title: '몽클레어 긴자', position: { lat: 35.67390703501073, lng: 139.76716649666173 }},
-    { title: '몽클레어 긴자 우먼', position: { lat: 35.67238207461945, lng: 139.76666059178848 }},
-    { title: '까르띠에 긴자', position: { lat: 35.67344430727107, lng: 139.76670139340388 }},
-    { title: 'sacai 미츠코시긴자', position: { lat: 35.67149779807367, lng: 139.7656136168124 }},
-  ]
+    {
+      title: "에르메스 긴자",
+      position: { lat: 35.67220270841222, lng: 139.76351396445938 },
+    },
+    {
+      title: "몽클레어 긴자",
+      position: { lat: 35.67390703501073, lng: 139.76716649666173 },
+    },
+    {
+      title: "몽클레어 긴자 우먼",
+      position: { lat: 35.67238207461945, lng: 139.76666059178848 },
+    },
+    {
+      title: "까르띠에 긴자",
+      position: { lat: 35.67344430727107, lng: 139.76670139340388 },
+    },
+    {
+      title: "sacai 미츠코시긴자",
+      position: { lat: 35.67149779807367, lng: 139.7656136168124 },
+    },
+  ];
 
   const mitsukoshi = {
-    contents: "1914년 오픈한 일본 최초의 백화점. 1935년에 지어진 르네상스 양식의 건물로 유명하다.",
+    contents:
+      "1914년 오픈한 일본 최초의 백화점. 1935년에 지어진 르네상스 양식의 건물로 유명하다.",
     url: "https://www.mistore.jp.k.az.hp.transer.com/store/nihombashi.html",
     marker: "ChIJiXTqi1WJGGAR08VFBmKoNrc",
     hours: "10:00 - 19:00 (구역별 상이)",
   };
   const takashimaya = {
-    contents: "본관, 동관, 신관, 워치메종 4개의 구역으로 구성. 1933년에 지어진 본관은 중요 문화재로 지정되어 건축 초기의 분위기가 남아있다.",
+    contents:
+      "본관, 동관, 신관, 워치메종 4개의 구역으로 구성. 1933년에 지어진 본관은 중요 문화재로 지정되어 건축 초기의 분위기가 남아있다.",
     url: "https://www.takashimaya-global.com/en/stores/nihombashi/",
     marker: "ChIJ__8Lhf2LGGARYj6XJNBik14",
     hours: "10:30 - 19:30 (구역별 상이)",
@@ -71,8 +94,10 @@ function Page() {
 
   return (
     <div className={styles.detail__wrap}>
-      <div className={styles.detail__title}>1월 18일 일요일 
-        <span className={styles.detail__title_desc}> ( 1 / 5 )</span></div>
+      <div className={styles.detail__title}>
+        1월 18일 일요일
+        <span className={styles.detail__title_desc}> ( 1 / 5 )</span>
+      </div>
       <div className="mg-top-20">
         <div className={styles.detail__slot}>
           <div className={styles.detail__slot_time_fixed}>09:00</div>
@@ -108,7 +133,12 @@ function Page() {
               <FoldInfo info={itoya} title="이토야 문구|伊東屋" />
               <FoldInfo info={kimuraya} title="기무라야|木村家" />
               <FoldInfo info={loft} title="로프트 긴자|ロフト" />
-              <FoldInfo info={brands} title="각종 브랜드 매장" overview={true} cluster={brandCluster} />
+              <FoldInfo
+                info={brands}
+                title="각종 브랜드 매장"
+                overview={true}
+                cluster={brandCluster}
+              />
             </div>
           </div>
         </div>
@@ -117,8 +147,14 @@ function Page() {
           <div className={styles.detail__slot_contents_wrap}>
             <div className={styles.detail__content}>✨ BONUS</div>
             <div className={styles.detail__spot}>
-                <FoldInfo info={mitsukoshi} title="미츠코시 본점|日本橋三越本店" />
-                <FoldInfo info={takashimaya} title="타카시마야 니혼바시|日本橋高島屋S.C." />
+              <FoldInfo
+                info={mitsukoshi}
+                title="미츠코시 본점|日本橋三越本店"
+              />
+              <FoldInfo
+                info={takashimaya}
+                title="타카시마야 니혼바시|日本橋高島屋S.C."
+              />
             </div>
           </div>
         </div>
