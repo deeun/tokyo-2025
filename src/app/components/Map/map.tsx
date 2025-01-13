@@ -92,7 +92,7 @@ function Map(props: MapProps) {
       const { target } = domEvent;
       infoWindow.setPosition(targetMarker.position);
       infoWindow.close();
-      infoWindow.setContent(`<a href=https://www.google.com/maps/place?key=${process.env.NEXT_PUBLIC_MAP_KEY}&q=place_id:ChIJAQAsR--LGGAR_AmB8WMDy88>부릉부릉</a>`,
+      infoWindow.setContent(`<a href=https://www.google.com/maps/place?key=${process.env.NEXT_PUBLIC_MAP_KEY}&q=긴자+식스&place_id:ChIJAQAsR--LGGAR_AmB8WMDy88>부릉부릉</a>`,
 );
       infoWindow.open(map, targetMarker);
     });
