@@ -2,6 +2,10 @@
     font-size: 15px;
     margin-top: 10px;
 }
+.fold__title_jap {
+    font-size: 14px;
+    color: var(--gray);
+}
 .fold__hours {
     color: var(--gray);
     font-size: 14px;

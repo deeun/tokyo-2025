@@ -1,0 +1,33 @@
+.helper__wrap {
+  width: 90%;
+  max-width: 440px;
+  min-width: 260px;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 90px;
+}
+.helper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  background-color: white;
+  height: 24px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.helper__contents {
+  background-color: white;
+  top: 120px;
+  position: fixed;
+  font-size: 12px;
+  line-height: 18px;
+  /* border: 1px solid var(--gray); */
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.green_letter {
+    color: var(--green);
+}

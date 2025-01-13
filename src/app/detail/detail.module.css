@@ -1,5 +1,26 @@
+.layout__wrap {
+    display: 'flex';
+    flex-direction: '';
+}
+.helper__wrap {
+    width: 100%;
+    max-width: 440px;
+    min-width: 280px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 90px;
+}
 .detail__wrap {
     margin-top: 20px;
+}
+.detail__title {
+    font-weight: 700;
+}
+.detail__title_desc {
+    font-size: 14px;
+    color: var(--gray);
+    font-weight: 500;
 }
 .detail__slot {
     /* background-color: red; */

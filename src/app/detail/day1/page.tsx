@@ -48,7 +48,6 @@ function Page() {
     marker: "",
     hours: "매장별 확인 필요",
   };
-
   const brandCluster = [
     { title: '에르메스 긴자', position: { lat: 35.67220270841222, lng: 139.76351396445938 }},
     { title: '몽클레어 긴자', position: { lat: 35.67390703501073, lng: 139.76716649666173 }},
@@ -57,9 +56,23 @@ function Page() {
     { title: 'sacai 미츠코시긴자', position: { lat: 35.67149779807367, lng: 139.7656136168124 }},
   ]
 
+  const mitsukoshi = {
+    contents: "1914년 오픈한 일본 최초의 백화점. 1935년에 지어진 르네상스 양식의 건물로 유명하다.",
+    url: "https://www.mistore.jp.k.az.hp.transer.com/store/nihombashi.html",
+    marker: "ChIJiXTqi1WJGGAR08VFBmKoNrc",
+    hours: "10:00 - 19:00 (구역별 상이)",
+  };
+  const takashimaya = {
+    contents: "본관, 동관, 신관, 워치메종 4개의 구역으로 구성. 1933년에 지어진 본관은 중요 문화재로 지정되어 건축 초기의 분위기가 남아있다.",
+    url: "https://www.takashimaya-global.com/en/stores/nihombashi/",
+    marker: "ChIJ__8Lhf2LGGARYj6XJNBik14",
+    hours: "10:30 - 19:30 (구역별 상이)",
+  };
+
   return (
     <div className={styles.detail__wrap}>
-      1월 18일 일요일 ( 1 / 5 )
+      <div className={styles.detail__title}>1월 18일 일요일 
+        <span className={styles.detail__title_desc}> ( 1 / 5 )</span></div>
       <div className="mg-top-20">
         <div className={styles.detail__slot}>
           <div className={styles.detail__slot_time_fixed}>09:00</div>
@@ -89,13 +102,23 @@ function Page() {
           <div className={styles.detail__slot_contents_wrap}>
             <div className={styles.detail__content}>🛍️ 긴자 쇼핑</div>
             <div className={styles.detail__spot}>
-              <FoldInfo info={ginzaSix} title="긴자식스 GINZA SIX" />
-              <FoldInfo info={uniqlo} title="유니클로 긴자점 ユニクロ 銀座店" />
-              <FoldInfo info={kuya} title="쿠야 空也" />
-              <FoldInfo info={itoya} title="이토야 문구 伊東屋" />
-              <FoldInfo info={kimuraya} title="기무라야 木村家" />
-              <FoldInfo info={loft} title="로프트 긴자 ロフト" />
+              <FoldInfo info={ginzaSix} title="긴자식스|GINZA SIX" />
+              <FoldInfo info={uniqlo} title="유니클로 긴자점|ユニクロ 銀座店" />
+              <FoldInfo info={kuya} title="쿠야|空也" />
+              <FoldInfo info={itoya} title="이토야 문구|伊東屋" />
+              <FoldInfo info={kimuraya} title="기무라야|木村家" />
+              <FoldInfo info={loft} title="로프트 긴자|ロフト" />
               <FoldInfo info={brands} title="각종 브랜드 매장" overview={true} cluster={brandCluster} />
+            </div>
+          </div>
+        </div>
+        <div className={styles.detail__slot}>
+          <div className={styles.detail__slot_time}>18:00</div>
+          <div className={styles.detail__slot_contents_wrap}>
+            <div className={styles.detail__content}>✨ BONUS</div>
+            <div className={styles.detail__spot}>
+                <FoldInfo info={mitsukoshi} title="미츠코시 본점|日本橋三越本店" />
+                <FoldInfo info={takashimaya} title="타카시마야 니혼바시|日本橋高島屋S.C." />
             </div>
           </div>
         </div>
