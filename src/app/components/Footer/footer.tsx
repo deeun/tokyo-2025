@@ -1,12 +1,12 @@
 'use client'
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './footer.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {setWordBalloonShow} from "../../../../store/headerSlice";
 
 function Footer() {
     const dispatch = useDispatch();
-    const capyShow = useSelector(state => state.headerReducer.capybaraShow)
+    // const capyShow = useSelector(state => state.headerReducer.capybaraShow)
     const balloonShow = useSelector(state => state.headerReducer.wordBalloonShow)
 
     const balloonClick = () => {

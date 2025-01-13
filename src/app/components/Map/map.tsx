@@ -1,17 +1,16 @@
 "use client";
-import { Property } from "csstype";
 import React, { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setLoading } from "../../../../store/loadingSlice";
 
 export interface MapProps {
-  width?: any;
-  height?: any;
-  locations?: any;
+  width?: string;
+  height?: string;
+  locations?: {title: string, position: {lat: string, lng: string}};
 }
 function Map(props: MapProps) {
   const mapRef = useRef(null);
-  const [map, setMap] = useState<any>(null);
+  const [map, setMap] = useState(null);
   const dispatch = useDispatch();
 //   const loading = useSelector(state => state.loadingReducer.loading)
   useEffect(() => {
@@ -57,7 +56,7 @@ function Map(props: MapProps) {
 
   const addMarkers = async (
     newMap: google.maps.Map<Element>,
-    newLocations: Object[]
+    newLocations: object[]
   ) => {
     const { AdvancedMarkerElement } = await google.maps?.importLibrary(
       "marker"

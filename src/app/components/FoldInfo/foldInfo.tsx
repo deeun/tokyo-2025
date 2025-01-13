@@ -5,14 +5,14 @@ import styles from "./foldInfo.module.css";
 import Map from "@/app/components/Map/map";
 
 export interface FoldProps {
-  title: String;
-  info: any;
-  overview?: Boolean;
-  cluster?: Object;
+  title: string;
+  info: {contents: string, url: string, hours: string, marker: object};
+  overview?: boolean;
+  cluster?: object;
 }
 function FoldInfo(props: FoldProps) {
   const [show, setShow] = useState(false);
-  const [mapKey, setMapKey] = useState<any>();
+  const [mapKey, setMapKey] = useState<string>('');
   const [info, setInfo] = useState({ contents: '', hours: '', url: '', marker: {} });
   useEffect(() => {
     setInfo(props.info);

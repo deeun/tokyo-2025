@@ -21,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ReduxProvider>
-        <body style={{display: 'flex', flexDirection: 'column'}}>
-          <LayoutWrapper children={children}/>
+        <body style={{ display: "flex", flexDirection: "column" }}>
+          <LayoutWrapper>{children}</LayoutWrapper>
         </body>
       </ReduxProvider>
     </html>
