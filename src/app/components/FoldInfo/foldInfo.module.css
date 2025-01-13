@@ -2,6 +2,11 @@
     font-size: 15px;
     margin-top: 10px;
 }
+.fold__hours {
+    color: var(--gray);
+    font-size: 14px;
+    margin: 4px 0;
+}
 .fold__contents {
 
     padding: 8px;
@@ -12,7 +17,7 @@
 .fold__url {
     font-size: 12px;
     margin-top: 4px;
-    color: var(--moss);
+    color: var(--main-bg-color);
     text-decoration: underline;
     margin-bottom: 4px;
 }

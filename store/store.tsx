@@ -3,6 +3,7 @@ import {persistStore} from "redux-persist";
 import storage from 'redux-persist/lib/storage';
 import {persistReducer} from "redux-persist";
 import {headerReducer} from "./headerSlice";
+import { loadingReducer } from "./loadingSlice";
 
 // redux-perist 적용
 const persistConfig = {
@@ -12,7 +13,7 @@ const persistConfig = {
     // blacklist: [''] // 해당 reducer만 제외
 };
 
-export const combinedStore = combineReducers({headerReducer})
+export const combinedStore = combineReducers({headerReducer, loadingReducer})
 
 export const store = configureStore({
     reducer: persistReducer(persistConfig, combinedStore),

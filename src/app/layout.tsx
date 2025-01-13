@@ -4,10 +4,9 @@ import "./styles/common.css";
 import "./styles/mg_pd.css";
 import "./styles/flex.css";
 import "./styles/font.css";
-import Header from "@/app/components/Header/header";
 import ReduxProvider from "../../store/ReduxProvider";
-import Footer from "@/app/components/Footer/footer";
 import LayoutWrapper from "@/app/layoutWrapper";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "도쿄 2025",

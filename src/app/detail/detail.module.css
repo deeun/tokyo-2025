@@ -1,0 +1,39 @@
+.detail__wrap {
+    margin-top: 20px;
+}
+.detail__slot {
+    /* background-color: red; */
+    padding: 14px 0;
+    display: flex;
+}
+.detail__slot > * {
+    font-size: 16px;
+}
+.detail__slot_time {
+    width: 60px;
+}
+.detail__slot_time_fixed {
+    width: 60px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    color: var(--green);
+}
+.detail__slot_contents_wrap {
+    width: calc(100% - 60px);
+}
+.detail__content {
+    line-height: 16px;
+    padding: 2px 0;
+}
+.detail__desc {
+    line-height: 16px;
+    padding: 4px;
+    color: var(--gray);
+    font-size: 14px;
+}
+.detail__spot {
+    /* line-height: 16px; */
+    margin-top: 6px;
+}

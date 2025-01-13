@@ -7,6 +7,27 @@ input:focus {
     outline: none;
 }
 
+.map-tag {
+    /* background-color: #4285F4; */
+    background-color: var(--green);
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 6px 10px;
+    position: relative;
+}
+.loading {
+    width: 100%;
+    /* max-width: 480px; */
+    height: calc(100vh);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-top: 50px;
+}
 .cp {
     cursor: pointer;
 }
@@ -130,6 +151,7 @@ input:focus {
     white-space: normal;
     text-overflow: ellipsis;
     display: -webkit-box;
+    line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: keep-all;

@@ -132,7 +132,10 @@ export default function Home() {
           </div>
 
           <div className={styles.section__wrap}>
-            <div className={"bold mg-bottom-20"}>📅 일정 요약</div>
+            <div className="fx-space-between">
+              <div className={"bold mg-bottom-20"}>📅 일정 요약</div>
+              <div className={styles.show__desc}>상세정보 날짜 클릭 !</div>
+            </div>
             <div className={styles.calendar__wrap}>
               <div className={`${styles.calendar__block} ${styles.bd_left}`}>
                 13

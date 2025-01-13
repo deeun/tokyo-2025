@@ -6,13 +6,13 @@ import "./styles/mg_pd.css";
 import "./styles/flex.css";
 import "./styles/font.css";
 import Header from './components/Header/header';
-import Footer from "@/app/components/Footer/footer";
+import { useSelector } from 'react-redux';
+import Loading from './components/Loading/loading';
 
 function LayoutWrapper({children}: Readonly<{
     children: React.ReactNode;
 }>) {
-    // const loading = useSelector(state => state.vocabReducer.tLoading)
-    // const error = useSelector(state => state.vocabReducer.isError)
+    const loading = useSelector(state => state.loadingReducer.loading)
     const [client, setClient] = useState(false);
     useEffect(() => {
         setClient(true);
@@ -23,7 +23,7 @@ function LayoutWrapper({children}: Readonly<{
                 client &&
                 <>
                     <Header/>
-                    {/*{loading && <Loading />}*/}
+                    {loading && <Loading />}
                     {/*{error.state && error.contents === 'BLOCK PAGE' && <Warning />}*/}
                     {children}
                     {/* <Footer /> */}
