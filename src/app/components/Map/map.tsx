@@ -6,7 +6,8 @@ import { setLoading } from "../../../../store/loadingSlice";
 export interface MapProps {
   width?: string;
   height?: string;
-  locations?: {title: string, position: {lat: string, lng: string}};
+  locations?: { title: string; position: { lat: string; lng: string } };
+  place?: { lat: ""; lng: "" };
 }
 function Map(props: MapProps) {
   const mapRef = useRef(null);
@@ -40,29 +41,15 @@ function Map(props: MapProps) {
         center: { lat: 35.67238207461945, lng: 139.76666059178848 },
         zoom: 17,
         mapId: "tokyomap",
-        disableDefaultUI: true,
+        // disableDefaultUI: false,
       });
 
       setMap(map);
       await addMarkers(map, props.locations);
-      // await navigator.geolocation.getCurrentPosition(function async(position) {
-      //   const currentLocation = {
-      //     lat: position.coords.latitude,
-      //     lng: position.coords.longitude,
-      //   };
-      //   const map = new window.google.maps.Map(mapRef.current, {
-      //     center: currentLocation,
-      //     zoom: 17,
-      //     mapId: "tokyomap",
-      //     disableDefaultUI: true,
-      //   });
-
-      //   setMap(map);
-      //   addMarkers(map, props.locations);
-      // });
     }
   };
 
+  let marker;
   const addMarkers = async (
     newMap: google.maps.Map<Element>,
     newLocations: object[]
@@ -70,32 +57,57 @@ function Map(props: MapProps) {
     const { AdvancedMarkerElement } = await google.maps?.importLibrary(
       "marker"
     );
-    let marker;
-    newMap.setCenter(newLocations[0].position);
-    newLocations?.forEach((l: any) => {
-      const tag = document.createElement("div");
-      tag.className = "map-tag";
-      tag.textContent = l.title;
+    if (props.place) {
+      newMap.setCenter(props.place);
       marker = new AdvancedMarkerElement({
         map: newMap,
-        position: l.position,
-        content: tag,
+        position: props.place,
+        gmpClickable: true,
       });
-    });
-
+    } else {
+      newMap.setCenter(newLocations[0].position);
+      newLocations?.forEach((l: any) => {
+        const tag = document.createElement("div");
+        tag.className = "map-tag";
+        tag.textContent = l.title;
+        marker = new AdvancedMarkerElement({
+          map: newMap,
+          position: l.position,
+          content: tag,
+        });
+        addClickEvent(marker, newMap)
+      });
+    }
     dispatch(setLoading(false));
   };
 
+  const addClickEvent = (targetMarker, map) => {
+    targetMarker.addListener("click", ({ domEvent, latLng }) => {
+
+      let infoWindow = new google.maps.InfoWindow({
+        content: `<a href=https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_MAP_KEY}&q=place_id:ChIJAQAsR--LGGAR_AmB8WMDy88>부릉부릉</a>`,
+      });
+
+      console.log("click", latLng);
+      const { target } = domEvent;
+      infoWindow.setPosition(targetMarker.position);
+      infoWindow.close();
+      infoWindow.setContent(`<a href=https://www.google.com/maps/place?key=${process.env.NEXT_PUBLIC_MAP_KEY}&q=place_id:ChIJAQAsR--LGGAR_AmB8WMDy88>부릉부릉</a>`,
+);
+      infoWindow.open(map, targetMarker);
+    });
+  }  
+
   return (
     <>
-        <div
-          id="map"
-          ref={mapRef}
-          style={{
-            height: props.height ? props.height : "400px",
-            width: props.width ? props.width : "100%",
-          }}
-        />
+      <div
+        id="map"
+        ref={mapRef}
+        style={{
+          height: props.height ? props.height : "400px",
+          width: props.width ? props.width : "100%",
+        }}
+      />
     </>
   );
 }

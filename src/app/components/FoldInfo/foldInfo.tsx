@@ -6,14 +6,14 @@ import Map from "@/app/components/Map/map";
 
 export interface FoldProps {
   title: string;
-  info: {contents: string, url: string, hours: string, marker: object};
+  info: {contents: string, url: string, hours: string, marker: string, place: object};
   overview?: boolean;
   cluster?: object;
 }
 function FoldInfo(props: FoldProps) {
   const [show, setShow] = useState(false);
   const [mapKey, setMapKey] = useState<string>('');
-  const [info, setInfo] = useState({ contents: '', hours: '', url: '', marker: {} });
+  const [info, setInfo] = useState({ contents: '', hours: '', url: '', marker: '', place: {} });
   useEffect(() => {
     setInfo(props.info);
     setMapKey(process.env.NEXT_PUBLIC_MAP_KEY);
@@ -47,15 +47,16 @@ function FoldInfo(props: FoldProps) {
                 <Map locations={props.cluster} />
               </div>
             ) : (
-              <iframe
-                width="100%"
-                style={{ border: "none" }}
-                height="120"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                src={`https://www.google.com/maps/embed/v1/place?key=${mapKey}&q=place_id:${info.marker}`}
-              ></iframe>
+              <Map place={props.info.place} height={120} />
+              // <iframe
+              //   width="100%"
+              //   style={{ border: "none" }}
+              //   height="120"
+              //   loading="lazy"
+              //   allowFullScreen
+              //   referrerPolicy="no-referrer-when-downgrade"
+              //   src={`https://www.google.com/maps/embed/v1/place?key=${mapKey}&q=place_id:${info.marker}`}
+              // ></iframe>
             )}
           </div>
         )}

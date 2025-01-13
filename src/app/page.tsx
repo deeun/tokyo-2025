@@ -2,16 +2,23 @@
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
+import { setLoading } from "../../store/loadingSlice";
+import { useDispatch } from "react-redux";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const [mapKey, setMapKey] = useState("");
   const [tokyoHotelShow, setTokyoHotelShow] = useState(false);
   const [yokoHotelShow, setYokoHotelShow] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setLoading(false));
+    localStorage.clear();
+  }, []);
   useEffect(() => {
     setIsClient(true);
     localStorage.clear();
-    setMapKey(process.env.NEXT_PUBLIC_MAP_KEY);
   }, [mapKey]);
   const router = useRouter();
   const dateClick = (day: number) => {

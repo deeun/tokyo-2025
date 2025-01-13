@@ -16,6 +16,7 @@ function Page() {
     url: "https://ginza6.tokyo.e.abf.hp.transer.com/shops/",
     marker: "ChIJAQAsR--LGGAR_AmB8WMDy88",
     hours: "10:30 - 20:30",
+    place: { lat: 35.67220270841222, lng: 139.76351396445938 },
   };
   const uniqlo = {
     contents: "1 ~ 12층까지 건물 전체가 유니클로.",
