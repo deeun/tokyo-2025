@@ -84,7 +84,7 @@ function Map(props: MapProps) {
   const addClickEvent = (targetMarker, map) => {
     targetMarker.addListener("click", ({ domEvent, latLng }) => {
 
-      let infoWindow = new google.maps.InfoWindow({
+      const infoWindow = new google.maps.InfoWindow({
         content: `<a href=https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_MAP_KEY}&q=place_id:ChIJAQAsR--LGGAR_AmB8WMDy88>부릉부릉</a>`,
       });
 
