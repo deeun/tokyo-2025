@@ -1,5 +1,4 @@
 import Helper from "../components/Helper/helper";
-import styles from './detail.module.css';
 
 export default function Layout({ children }) {
   return (

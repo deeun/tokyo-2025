@@ -6,7 +6,6 @@ import "./styles/flex.css";
 import "./styles/font.css";
 import ReduxProvider from "../../store/ReduxProvider";
 import LayoutWrapper from "@/app/layoutWrapper";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "도쿄 2025",

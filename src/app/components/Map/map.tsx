@@ -3,11 +3,18 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setLoading } from "../../../../store/loadingSlice";
 
+export interface PlaceInfoProps {
+  title: string,
+  contents?: string,
+  url?: string,
+  hours?: string,
+  position: { lat: number, lng: number }
+}
+export type PlaceInfoClusterProps = PlaceInfoProps[];
 export interface MapProps {
   width?: string;
-  height?: string;
-  locations?: { title: string; position: { lat: string; lng: string } };
-  place?: { lat: ""; lng: "" };
+  height?: string | number;
+  locations?: PlaceInfoProps;
 }
 function Map(props: MapProps) {
   const mapRef = useRef(null);
@@ -56,9 +63,7 @@ function Map(props: MapProps) {
     newLocations: object[]
   ) => {
     const { AdvancedMarkerElement } = await google.maps?.importLibrary("marker");
-    console.log('props.locations', props.locations)
     if (!Array.isArray(props.locations)) {
-      console.log('here ???', props.locations.position);
       newMap.setCenter(props.locations.position);
       marker = new AdvancedMarkerElement({
         map: newMap,

@@ -73,7 +73,6 @@ function Page() {
   const brands = {
     contents: "",
     url: "",
-    marker: "",
     hours: "매장별 확인 필요",
   };
   const brandCluster = [
