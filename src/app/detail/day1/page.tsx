@@ -109,7 +109,7 @@ function Page() {
   return (
     <div className={styles.detail__wrap}>
       <div className={styles.detail__title}>
-        1월 18일 일요일
+        1월 18일 토요일
         <span className={styles.detail__title_desc}> ( 1 / 5 )</span>
       </div>
       <div className="mg-top-20">

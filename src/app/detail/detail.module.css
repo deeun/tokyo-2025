@@ -53,7 +53,14 @@
     padding: 4px;
     color: var(--gray);
     font-size: 14px;
+    margin-top: 6px;
 }
 .detail__spot {
     margin-top: 6px;
+}
+.detail__link {
+    font-size: 14px;
+    margin-top: 6px;
+    color: var(--main-bg-color);
+    text-decoration: underline;
 }

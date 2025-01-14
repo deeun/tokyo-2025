@@ -18,6 +18,7 @@ export default function Home() {
   }, []);
   useEffect(() => {
     setIsClient(true);
+    setMapKey(process.env.NEXT_PUBLIC_MAP_KEY);
     localStorage.clear();
   }, [mapKey]);
   const router = useRouter();
