@@ -9,7 +9,7 @@ input:focus {
 
 .map-tag {
     /* background-color: #4285F4; */
-    background-color: var(--green);
+    background-color: var(--orange);
     border-radius: 4px;
     color: #FFFFFF;
     font-size: 14px;

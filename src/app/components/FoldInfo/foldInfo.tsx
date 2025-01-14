@@ -47,16 +47,16 @@ function FoldInfo(props: FoldProps) {
                 <Map locations={props.cluster} />
               </div>
             ) : (
-              // <Map place={props.info.place} height={120} />
-              <iframe
-                width="100%"
-                style={{ border: "none" }}
-                height="120"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                src={`https://www.google.com/maps/embed/v1/place?key=${mapKey}&q=place_id:${info.marker}`}
-              ></iframe>
+              <Map locations={props.info} height={120} />
+              // <iframe
+              //   width="100%"
+              //   style={{ border: "none" }}
+              //   height="120"
+              //   loading="lazy"
+              //   allowFullScreen
+              //   referrerPolicy="no-referrer-when-downgrade"
+              //   src={`https://www.google.com/maps/embed/v1/place?key=${mapKey}&q=place_id:${info.marker}`}
+              // ></iframe>
             )}
           </div>
         )}

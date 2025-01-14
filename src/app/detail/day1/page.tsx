@@ -12,17 +12,19 @@ function Page() {
     dispatch(setLoading(false));
   }, []);
   const ginzaSix = {
+    title: "긴자 식스",
     contents: "250개의 브랜드 매장이 입점한 긴자 최대 규모의 복합 쇼핑몰.",
     url: "https://ginza6.tokyo.e.abf.hp.transer.com/shops/",
-    marker: "ChIJAQAsR--LGGAR_AmB8WMDy88",
+    // marker: "ChIJAQAsR--LGGAR_AmB8WMDy88",
     hours: "10:30 - 20:30",
-    place: { lat: 35.67220270841222, lng: 139.76351396445938 },
+    position: { lat: 35.66993134597202, lng: 139.76411543563123 },
   };
   const uniqlo = {
     contents: "1 ~ 12층까지 건물 전체가 유니클로.",
     url: "",
     marker: "ChIJb9MHbuaLGGAR0xi-noU25UU",
     hours: "11:00 - 21:00",
+    position: { lat: 35.67045482297614, lng: 139.76347106667262 },
   };
   const kuya = {
     contents: "1891 설립 후 3대 째 운영 중. 모나카가 제일 유명하다.",
@@ -59,22 +61,30 @@ function Page() {
     {
       title: "에르메스 긴자",
       position: { lat: 35.67220270841222, lng: 139.76351396445938 },
+      hours: "11:00 - 19:00",
     },
     {
       title: "몽클레어 긴자",
+      keyword: "Moncler Ginza FSS",
       position: { lat: 35.67390703501073, lng: 139.76716649666173 },
+      hours: "11:00 - 20:00",
     },
     {
       title: "몽클레어 긴자 우먼",
+      keyword: "モンクレール 東京 松屋銀座ウィメンズ店",
       position: { lat: 35.67238207461945, lng: 139.76666059178848 },
+      hours: "11:00 - 20:00",
     },
     {
       title: "까르띠에 긴자",
+      keyword: "Cartier Ginza カルティエ銀座ブティック",
       position: { lat: 35.67344430727107, lng: 139.76670139340388 },
+      hours: "11:00 - 19:00",
     },
     {
       title: "sacai 미츠코시긴자",
       position: { lat: 35.67149779807367, lng: 139.7656136168124 },
+      hours: "10:00 - 20:00",
     },
   ];
 

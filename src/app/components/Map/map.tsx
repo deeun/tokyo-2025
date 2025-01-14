@@ -49,21 +49,23 @@ function Map(props: MapProps) {
     }
   };
 
+  // 장소 마커 추가
   let marker;
   const addMarkers = async (
     newMap: google.maps.Map<Element>,
     newLocations: object[]
   ) => {
-    const { AdvancedMarkerElement } = await google.maps?.importLibrary(
-      "marker"
-    );
-    if (props.place) {
-      newMap.setCenter(props.place);
+    const { AdvancedMarkerElement } = await google.maps?.importLibrary("marker");
+    console.log('props.locations', props.locations)
+    if (!Array.isArray(props.locations)) {
+      console.log('here ???', props.locations.position);
+      newMap.setCenter(props.locations.position);
       marker = new AdvancedMarkerElement({
         map: newMap,
-        position: props.place,
+        position: props.locations.position,
         gmpClickable: true,
       });
+      onClickMarker(marker, newMap, props.locations);
     } else {
       newMap.setCenter(newLocations[0].position);
       newLocations?.forEach((l: any) => {
@@ -75,28 +77,31 @@ function Map(props: MapProps) {
           position: l.position,
           content: tag,
         });
-        addClickEvent(marker, newMap)
+        onClickOpenInfoWindow(marker, newMap, l);
       });
     }
     dispatch(setLoading(false));
   };
 
-  const addClickEvent = (targetMarker, map) => {
-    targetMarker.addListener("click", ({ domEvent, latLng }) => {
-
-      const infoWindow = new google.maps.InfoWindow({
-        content: `<a href=https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_MAP_KEY}&q=place_id:ChIJAQAsR--LGGAR_AmB8WMDy88>부릉부릉</a>`,
-      });
-
-      console.log("click", latLng);
-      const { target } = domEvent;
+  const onClickMarker = (targetMarker, map, info) => {
+    targetMarker.addListener("click", () => {
+      window.open(`https://www.google.com/maps/place?q=${info.title.split(' ').join('+')}`, '_self')
+    });
+  }
+  
+  const onClickOpenInfoWindow = (targetMarker, map, info) => {
+    targetMarker.addListener("click", () => {
+      const infoWindow = new google.maps.InfoWindow();
       infoWindow.setPosition(targetMarker.position);
       infoWindow.close();
-      infoWindow.setContent(`<a href=https://www.google.com/maps/place?key=${process.env.NEXT_PUBLIC_MAP_KEY}&q=긴자+식스&place_id:ChIJAQAsR--LGGAR_AmB8WMDy88>부릉부릉</a>`,
-);
+      const searchWord = info.keyword ? info.keyword.split(' ').join('+') : info.title.split(' ').join('+');
+      infoWindow.setContent(
+        `<div>운영시간: ${info.hours}</div>
+        <a href=https://www.google.com/maps/place?q=${searchWord}>Google 지도에서 보기</a>`
+      );
       infoWindow.open(map, targetMarker);
     });
-  }  
+  };
 
   return (
     <>
