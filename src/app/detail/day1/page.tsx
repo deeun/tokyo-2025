@@ -15,41 +15,60 @@ function Page() {
     title: "긴자 식스",
     contents: "250개의 브랜드 매장이 입점한 긴자 최대 규모의 복합 쇼핑몰.",
     url: "https://ginza6.tokyo.e.abf.hp.transer.com/shops/",
-    // marker: "ChIJAQAsR--LGGAR_AmB8WMDy88",
     hours: "10:30 - 20:30",
     position: { lat: 35.66993134597202, lng: 139.76411543563123 },
   };
   const uniqlo = {
+    title: "유니클로 긴자점",
     contents: "1 ~ 12층까지 건물 전체가 유니클로.",
     url: "",
-    marker: "ChIJb9MHbuaLGGAR0xi-noU25UU",
     hours: "11:00 - 21:00",
     position: { lat: 35.67045482297614, lng: 139.76347106667262 },
   };
   const kuya = {
+    title: "空也 ginza",
     contents: "1891 설립 후 3대 째 운영 중. 모나카가 제일 유명하다.",
     url: "",
-    marker: "ChIJqfbrAOaLGGARjRJSt5urSCQ",
+    position: { lat: 35.671015152721445, lng: 139.76280290530107 },
     hours: "10:00 - 16:00",
   };
   const itoya = {
+    title: "이토야 문구 긴자점",
     contents:
       "1904년 창업한 전13층의 대규모 문구 전문점. 본점인 G.Itoya와, 길 건너편 고급 필기구 전문 매장인 K.Itoya 매장으로 구분.",
     url: "https://www.ito-ya.co.jp/ext/store/ginza/ginza/index.html#event",
-    marker: "ChIJKQAKAOSLGGARwGhpOXWgfYo",
+    position: { lat: 35.67332996129044, lng: 139.76724841368667 },
     hours: "10:00 - 20:00",
   };
   const kimuraya = {
+    title: "긴자기무라야 긴자본점",
     contents: "1869년 설립. 세계 최초로 단팥빵이 탄생한 곳.",
     url: "",
-    marker: "ChIJm2TXf-aLGGARtR9aL0V6gxE",
+    position: { lat: 35.67187728723715, lng: 139.76520625774572 },
     hours: "10:00 - 20:00",
   };
   const loft = {
+    title: "긴자 로프트",
     contents: "화장품 및 잡화 매장",
     url: "",
-    marker: "ChIJm2TXf-aLGGARtR9aL0V6gxE",
+    position: { lat: 35.67414654162956, lng: 139.76643366760655 },
     hours: "11:00 - 21:00 (일 20:00)",
+  };
+  const mitsukoshi = {
+    title: "니혼바시 미츠코시 본점",
+    contents:
+      "1914년 오픈한 일본 최초의 백화점. 1935년에 지어진 르네상스 양식의 건물로 유명하다.",
+    url: "https://www.mistore.jp.k.az.hp.transer.com/store/nihombashi.html",
+    position: { lat: 35.68582488652542, lng: 139.7734081383735 },
+    hours: "10:00 - 19:00 (구역별 상이)",
+  };
+  const takashimaya = {
+    title: "日本橋高島屋S.C.",
+    contents:
+      "본관, 동관, 신관, 워치메종 4개의 구역으로 구성. 1933년에 지어진 본관은 중요 문화재로 지정되어 건축 초기의 분위기가 남아있다.",
+    url: "https://www.takashimaya-global.com/en/stores/nihombashi/",
+    position: { lat: 35.68100981469591, lng: 139.77351947516948 },
+    hours: "10:30 - 19:30 (구역별 상이)",
   };
   const brands = {
     contents: "",
@@ -87,21 +106,6 @@ function Page() {
       hours: "10:00 - 20:00",
     },
   ];
-
-  const mitsukoshi = {
-    contents:
-      "1914년 오픈한 일본 최초의 백화점. 1935년에 지어진 르네상스 양식의 건물로 유명하다.",
-    url: "https://www.mistore.jp.k.az.hp.transer.com/store/nihombashi.html",
-    marker: "ChIJiXTqi1WJGGAR08VFBmKoNrc",
-    hours: "10:00 - 19:00 (구역별 상이)",
-  };
-  const takashimaya = {
-    contents:
-      "본관, 동관, 신관, 워치메종 4개의 구역으로 구성. 1933년에 지어진 본관은 중요 문화재로 지정되어 건축 초기의 분위기가 남아있다.",
-    url: "https://www.takashimaya-global.com/en/stores/nihombashi/",
-    marker: "ChIJ__8Lhf2LGGARYj6XJNBik14",
-    hours: "10:30 - 19:30 (구역별 상이)",
-  };
 
   return (
     <div className={styles.detail__wrap}>
