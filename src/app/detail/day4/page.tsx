@@ -11,7 +11,7 @@ function Page() {
     dispatch(setLoading(false));
   }, []);
   const park = {
-    title: "元町公園",
+    title: "yokohama 元町公園",
     contents: "공원 내부에 야마테 서양관 등 여러 구경거리가 있다.",
     url: "",
     hours: "-",
@@ -41,7 +41,7 @@ function Page() {
     contents: "1913년에 완성된 항만용 창고. 2002년부터는 1호관은 전시공간으로, 2호관은 레스토랑과 숍이 들어서면서 있다. 야경으로도 유명.",
     url: "",
     hours: "11:00 - 20:00",
-    position: { lat: 35.66102057462169, lng: 139.6997337027171 },
+    position: { lat: 35.4529062243034, lng: 139.64294174530835 },
   };
   const cosmo = {
     title: "요코하마 코스모월드",

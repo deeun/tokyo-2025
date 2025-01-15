@@ -109,11 +109,11 @@ function Page() {
           <div className={styles.detail__slot_time}>11:00</div>
           <div className={styles.detail__slot_contents_wrap}>
             <div className={styles.detail__content}>
-              ☕️ 스타벅스 리저브 로스터리 도쿄
+              ☕️ 스타벅스 구경
               <div className={styles.detail__spot}>
                 <FoldInfo
                   info={starbucks}
-                  title="|STARBUCKS RESERVE(R) ROASTERY TOKYO"
+                  title="스타벅스 리저브 로스터리 도쿄|STARBUCKS RESERVE(R) ROASTERY TOKYO"
                 />
               </div>
             </div>
