@@ -1,5 +1,5 @@
 .section__wrap {
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
   margin-top: 20px;
   border-radius: 8px;
   padding: 16px;
@@ -22,7 +22,6 @@
   border-right: 1px solid #333333;
   border-top: 1px solid #333333;
   font-size: 12px;
-  font-family: "Pretendard-Regular";
   cursor: pointer;
 }
 .calendar__block__bottom {
@@ -33,7 +32,6 @@
   border-bottom: 1px solid #333333;
   border-top: 1px solid #333333;
   font-size: 12px;
-  font-family: "Pretendard-Regular";
 }
 .bd_left {
   border-left: 1px solid #333333;
@@ -46,7 +44,7 @@
 .show__desc {
   color: var(--green);
   font-size: 12px;
-  font-family: 'NSR B';
+  font-family: 'Nexon M';
 }
 
 @media (max-width: 480px) {

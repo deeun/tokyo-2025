@@ -35,7 +35,7 @@ export default function Home() {
             <div className={""}>
               <div className={"fs-12 ft_999 h100"}>대한항공 KE2101</div>
               <div className={"fx h100 mg-top-4"}>
-                <div className={"bold mg-right-5"}>출국</div>
+                <div className={"medium mg-right-5"}>출국</div>
                 <div>25/01/18(토)</div>
               </div>
               <div className={"fx-space-between mg-top-10"}>
@@ -53,7 +53,7 @@ export default function Home() {
             <div className={"mg-top-20"}>
               <div className={"fs-12 ft_999 h100"}>대한항공 KE2104</div>
               <div className={"fx h100 mg-top-4"}>
-                <div className={"bold mg-right-5"}>입국</div>
+                <div className={"medium mg-right-5"}>입국</div>
                 <div>25/01/22(수)</div>
               </div>
               <div className={"fx-space-between mg-top-10"}>
@@ -77,7 +77,7 @@ export default function Home() {
             <div>
               <div className={"mg-top-20"}>
                 <div
-                  className={"bold"}
+                  className={"medium"}
                   onClick={() => setTokyoHotelShow(!tokyoHotelShow)}
                 >
                   <span>{tokyoHotelShow ? "▼ " : "▶︎ "}︎</span>도쿄 (3박)
@@ -107,7 +107,7 @@ export default function Home() {
 
               <div className={"mg-top-20"}>
                 <div
-                  className={"bold"}
+                  className={"medium"}
                   onClick={() => setYokoHotelShow(!yokoHotelShow)}
                 >
                   <span>{yokoHotelShow ? "▼ " : "▶︎ "}︎</span>요코하마 (1박)

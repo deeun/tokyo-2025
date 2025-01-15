@@ -5,6 +5,7 @@
 .fold__title_jap {
     font-size: 14px;
     color: var(--gray);
+    font-family: "Pretendard JP";
 }
 .fold__hours {
     color: var(--gray);

@@ -15,13 +15,14 @@
     margin-top: 20px;
 }
 .detail__title {
-    font-family: 'NSR B';
+    font-family: 'Nexon B';
     font-size: 17px;
 }
 .detail__title_desc {
     font-size: 14px;
     color: var(--gray);
     font-weight: 500;
+    font-family: 'Pretendard JP';
 }
 .detail__slot {
     padding: 14px 0;
