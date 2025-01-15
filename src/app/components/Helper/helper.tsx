@@ -9,7 +9,8 @@ const Helper = () => {
         <div className={styles.helper__wrap}>
             <div>
                 <div className={styles.helper} onClick={() => setDetailShow(!detailShow)}>
-                    <img src={'/img/question_moss.png'} alt='' width={24} />
+                    {/* <img src={'/img/question_moss.png'} alt='' width={24} /> */}
+                    ?
                 </div>
             </div>
             {detailShow && 
