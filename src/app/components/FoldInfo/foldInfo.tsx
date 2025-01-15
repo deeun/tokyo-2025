@@ -35,7 +35,8 @@ function FoldInfo(props: FoldProps) {
       <div className={styles.fold__title} onClick={() => setShow(!show)}>
         <span>{show ? "▼ " : "▶︎ "}︎</span>
         {props.title.split('|')[0]}
-        <span className={styles.fold__title_jap}> {props.title.split('|')[1]}</span>
+        {props.title.split('|')[1]?.length > 10 && <br/>}
+        <span className={`${props.title.split('|')[1]?.length > 10 && 'mg-left-18'} ${styles.fold__title_jap}`}> {props.title.split('|')[1]}</span>
       </div>
       <div className={styles.footer__contents_wrap}>
         {show && (
