@@ -4,7 +4,7 @@
     min-width: 320px;
     position: fixed;
     top: 0;
-    background-color: var(--green);
+    background-color: var(--main);
     display: flex;
     flex-direction: column;
     z-index: 999;

@@ -37,7 +37,7 @@
 .detail__slot_time_fixed {
     width: 60px;
     height: 20px;
-    color: var(--green);
+    color: var(--main);
 }
 .detail__slot_contents_wrap {
     width: calc(100% - 60px);

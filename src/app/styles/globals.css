@@ -5,7 +5,8 @@
 }
 
 :root {
-  --main-bg-color: cornflowerblue;
+  /* --main: #3676E8; */
+  --main: #4a83ea;
   --orange: #ff9800;
   --latte: #D6C0B3;
   --moss: #A5B68D;

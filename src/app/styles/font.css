@@ -75,7 +75,7 @@
 
 .jp-bold {
     font-weight: 700 !important;
-    color: var(--green);
+    color: var(--main);
     font-family: "Pretendard JP";
 }
 
