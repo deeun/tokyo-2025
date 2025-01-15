@@ -15,8 +15,9 @@
     margin-top: 20px;
 }
 .detail__title {
-    font-family: 'Nexon B';
+    font-family: 'Nexon M';
     font-size: 17px;
+    color: #464646;
 }
 .detail__title_desc {
     font-size: 14px;

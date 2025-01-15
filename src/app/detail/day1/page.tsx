@@ -77,6 +77,12 @@ function Page() {
   };
   const brandCluster = [
     {
+      title: "몽클레어 긴자 우먼",
+      keyword: "モンクレール 東京 松屋銀座ウィメンズ店",
+      position: { lat: 35.67238207461945, lng: 139.76666059178848 },
+      hours: "11:00 - 20:00",
+    },
+    {
       title: "에르메스 긴자",
       position: { lat: 35.67220270841222, lng: 139.76351396445938 },
       hours: "11:00 - 19:00",
@@ -85,12 +91,6 @@ function Page() {
       title: "몽클레어 긴자",
       keyword: "Moncler Ginza FSS",
       position: { lat: 35.67390703501073, lng: 139.76716649666173 },
-      hours: "11:00 - 20:00",
-    },
-    {
-      title: "몽클레어 긴자 우먼",
-      keyword: "モンクレール 東京 松屋銀座ウィメンズ店",
-      position: { lat: 35.67238207461945, lng: 139.76666059178848 },
       hours: "11:00 - 20:00",
     },
     {
